@@ -1,0 +1,55 @@
+/* @import url(small.css) (min-width:0px);
+@import url(large.css) (min-width:900px); */
+
+:root {
+  --main-bg-color: rgb(35, 35, 35);
+  --main-text-color: rgb(255 255 255);
+  --alt-bg-color: rgb(223 223 223);
+}
+
+html {
+  display: block;
+  width: 100%;
+}
+
+body {
+  background-color: rgb(35, 35, 35);
+  color: #f9faffde;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-shadow: #858ebc -2px 2px 8px;
+  padding-top: 20vh;
+}
+
+.container {
+  margin-top: 10%;
+}
+
+input {
+  box-shadow: 0px 2px 4px 2px #858ebc;
+  border: 0;
+  border-radius: 2px;
+  margin: 12px;
+  font-size: 16px;
+}
+
+.prompt-box {
+  color: #f9faffde;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 50px;
+  text-shadow: #858ebc -2px 2px 8px;
+}
+
+#content {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-flow: column;
+  font-size: 24px;
+  line-height: 48px;
+}
