@@ -1,10 +1,4 @@
 window.addEventListener("load", () => {
-  function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
-  }
-
   let debounce = function(func, delay) {
     clearTimeout(timeout);
     timeout = setTimeout(func, delay);
@@ -19,7 +13,7 @@ window.addEventListener("load", () => {
     let div = document.createElement("div");
     let counter = words.length;
     
-    for (let i = 0; i < 9; i++) {
+    for (let i = 0; i < 5; i++) {
       while (counter > 0) {
         let index = Math.floor(Math.random() * counter);
         counter--;
@@ -36,10 +30,8 @@ window.addEventListener("load", () => {
   
   function onType(e) {
     if (!e || !e.data || e.target.value.length < 3) return;
-    content.innerHTML = input.value;
     debounce(() => translate(input.value), 300);
   }
-
   let content = document.getElementById("content");
   let input = document.getElementById("prompt");
   input.oninput = onType;
